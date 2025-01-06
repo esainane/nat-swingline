@@ -36,7 +36,7 @@ setup() {
     ip netns add ns-client
 
     # Add the bridge on ns-global
-    ip link add name ns-bridge netns ns-global type bridge 
+    ip link add name ns-bridge netns ns-global type bridge
     ip netns exec ns-global ip link set ns-bridge up
 
     # Create the veth pairs

@@ -60,7 +60,7 @@ async def main():
                 pass
             case _:
                 raise Exception("Connection failed: " + response)
- 
+
         # Wait for the broker to make requests of us
         async for message in websocket:
             data = json.loads(message)
